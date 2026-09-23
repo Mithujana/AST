@@ -1,0 +1,50 @@
+export const UNIVERSITIES = [
+  {
+    id: "oxford-brookes",
+    name: "Oxford Brookes University",
+    country: "United Kingdom",
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop",
+    popularAreas: ["Business", "Architecture", "Hospitality"],
+    level: "Undergraduate & Postgraduate",
+  },
+  {
+    id: "monash-university",
+    name: "Monash University",
+    country: "Australia",
+    image: "https://images.unsplash.com/photo-1629235882260-d7a8e841269e?q=80&w=2056&auto=format&fit=crop",
+    popularAreas: ["Engineering", "Medicine", "IT"],
+    level: "All Levels",
+  },
+  {
+    id: "university-toronto",
+    name: "University of Toronto",
+    country: "Canada",
+    image: "https://images.unsplash.com/photo-1555562725-78e7278d6bba?q=80&w=2070&auto=format&fit=crop",
+    popularAreas: ["Computer Science", "Finance", "Life Sciences"],
+    level: "All Levels",
+  },
+  {
+    id: "tum-germany",
+    name: "Technical University of Munich",
+    country: "Europe",
+    image: "https://images.unsplash.com/photo-1598257006626-48b0c252070d?q=80&w=2070&auto=format&fit=crop",
+    popularAreas: ["Engineering", "Physics", "Informatics"],
+    level: "Undergraduate & Postgraduate",
+  },
+  {
+    id: "university-tokyo",
+    name: "The University of Tokyo",
+    country: "Japan",
+    image: "https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=2070&auto=format&fit=crop",
+    popularAreas: ["Robotics", "Economics", "Arts"],
+    level: "Undergraduate & Postgraduate",
+  },
+  {
+    id: "nus-singapore",
+    name: "National University of Singapore",
+    country: "Asia",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop",
+    popularAreas: ["Business Analytics", "Engineering", "Law"],
+    level: "All Levels",
+  }
+];
