@@ -13,7 +13,7 @@ export default function AboutPage() {
       {/* Page Header */}
       <section className="bg-navy py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay" />
-        <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Your Trusted Partner for Overseas Education</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Helping students achieve their dreams through global education opportunities with expert guidance and personalized support.
@@ -21,7 +21,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 mt-20">
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 mt-20">
         {/* Who We Are */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div>

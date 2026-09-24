@@ -17,30 +17,16 @@ export default function FeaturedUniversities() {
 
   return (
     <section className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Decorative Flight Trail */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 0.7, scale: 1 }}
-        viewport={{ once: true }}
-        animate={{
-          y: [0, -8, 0],
-          x: [0, -4, 0],
-        }}
-        transition={{
-          duration: 6.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-4 right-10 md:right-32 w-64 md:w-80 pointer-events-none select-none z-0"
-      >
+      {/* Static Decorative Flight Trail */}
+      <div className="absolute top-4 right-10 md:right-32 w-60 md:w-72 pointer-events-none select-none z-0 opacity-30">
         <img
           src="/images/plane-trail-1.png"
-          alt="Flight Arc Trail"
-          className="w-full h-auto opacity-70"
+          alt=""
+          className="w-full h-auto"
         />
-      </motion.div>
+      </div>
 
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <motion.h2 

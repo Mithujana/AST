@@ -11,30 +11,16 @@ export default function CTASection() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay z-0" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy to-transparent z-0" />
 
-      {/* Floating Plane Trail */}
-      <motion.div
-        initial={{ opacity: 0, x: -30, y: 20 }}
-        whileInView={{ opacity: 0.6, x: 0, y: 0 }}
-        viewport={{ once: true }}
-        animate={{
-          y: [0, -10, 0],
-          x: [0, 6, 0],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-8 left-8 sm:left-16 md:left-24 w-64 md:w-80 pointer-events-none select-none z-10 hidden sm:block"
-      >
+      {/* Static Plane Trail */}
+      <div className="absolute top-8 left-8 sm:left-16 md:left-24 w-64 md:w-80 pointer-events-none select-none z-10 hidden sm:block opacity-40">
         <img
           src="/images/plane-trail-3.png"
           alt="Flight Trail"
-          className="w-full h-auto drop-shadow-lg filter brightness-150 opacity-60"
+          className="w-full h-auto drop-shadow-lg filter brightness-150"
         />
-      </motion.div>
+      </div>
 
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

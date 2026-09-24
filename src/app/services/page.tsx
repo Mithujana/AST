@@ -14,7 +14,7 @@ export default function ServicesPage() {
       {/* Page Header */}
       <section className="bg-navy py-20 relative overflow-hidden mb-16">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=2049&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay" />
-        <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Services</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Comprehensive support tailored to your unique journey, ensuring a seamless transition to studying abroad.
@@ -22,7 +22,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 space-y-24">
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 space-y-24">
         {SERVICES.map((service, index) => (
           <div key={service.id} id={service.id} className="scroll-mt-32">
             <div className={`flex flex-col lg:flex-row gap-12 lg:gap-16 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
