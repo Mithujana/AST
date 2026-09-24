@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, PlaneTakeoff } from "lucide-react";
 import GooeyNav from "./ui/GooeyNav";
+import SpecularButton from "./ui/SpecularButton";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,9 +64,21 @@ export default function Navbar() {
 
         {/* CTA Button Desktop */}
         <div className="hidden lg:block">
-          <Link href="#consultation" className="inline-block bg-navy hover:bg-royal-blue text-white px-6 py-2.5 rounded-xl font-medium transition-colors shadow-sm hover:shadow-md">
+          <SpecularButton
+            size="sm"
+            radius={12}
+            tint="#1a365d"
+            tintOpacity={1}
+            blur={0}
+            textColor="#ffffff"
+            lineColor="#ffffff"
+            baseColor="#0f172a"
+            intensity={1.2}
+            shineSize={15}
+            onClick={() => router.push('#consultation')}
+          >
             Book Free Consultation
-          </Link>
+          </SpecularButton>
         </div>
 
         {/* Mobile Menu Button */}
