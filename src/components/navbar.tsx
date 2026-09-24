@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -17,26 +17,65 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolling, setIsScrolling] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastScrollYRef = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      const prevScrollY = lastScrollYRef.current;
+      const deltaY = currentScrollY - prevScrollY;
+
+      // 1. Scroll Direction Visibility Check
+      if (currentScrollY <= 30) {
+        // Always visible near top of page
+        setIsVisible(true);
+      } else if (deltaY > 6) {
+        // Scrolling down -> hide header
+        setIsVisible(false);
+        setMobileMenuOpen(false);
+      } else if (deltaY < -6) {
+        // Scrolling up -> bring header back
+        setIsVisible(true);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+
+      // 2. Active Scrolling Glass Effect
+      setIsScrolling(true);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 200);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none transition-all duration-300">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 pointer-events-none transition-transform duration-300 ease-in-out ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="max-w-[1560px] mx-auto px-2 sm:px-4 lg:px-6">
         <div
-          className={`pointer-events-auto bg-white rounded-b-2xl sm:rounded-b-[28px] border-b border-x border-slate-100/90 px-4 sm:px-7 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300 ${
-            isScrolled
-              ? "shadow-[0_16px_36px_rgba(0,18,60,0.15),0_2px_10px_rgba(0,0,0,0.04)]"
-              : "shadow-[0_10px_30px_rgba(0,18,60,0.11),0_2px_8px_rgba(0,0,0,0.03)]"
+          className={`pointer-events-auto rounded-b-2xl sm:rounded-b-[28px] border-b border-x px-4 sm:px-7 py-2.5 sm:py-3 flex items-center justify-between transition-all duration-300 ${
+            isScrolling
+              ? "bg-white/75 backdrop-blur-md backdrop-saturate-150 border-white/60 shadow-[0_16px_36px_rgba(0,18,60,0.14),0_2px_10px_rgba(255,255,255,0.4)_inset]"
+              : "bg-white backdrop-blur-none border-slate-100/90 shadow-[0_10px_30px_rgba(0,18,60,0.08)]"
           }`}
         >
           {/* Logo */}

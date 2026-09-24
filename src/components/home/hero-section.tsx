@@ -150,7 +150,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative bg-[#02183b] pt-28 sm:pt-32 md:pt-36 pb-20 sm:pb-24 md:pb-28 overflow-visible">
+    <section className="relative bg-[#02183b] pt-28 sm:pt-32 md:pt-36 pb-24 sm:pb-30 md:pb-36 lg:pb-40 overflow-visible">
       {/* Background Graphic Container: Deep Space, High-Resolution Globe, Stars & Atmosphere */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {/* Full-resolution pristine original asthero-bg.png shifted down so airplane is clearly below the floating header */}
@@ -322,14 +322,14 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom Smooth Curved Wave Shape of the Hero Section */}
+      {/* Bottom Smooth Curved Wave Shape of the Hero Section (Deep, Elegant Arch) */}
       <div className="absolute -bottom-[1px] left-0 right-0 w-full overflow-hidden leading-none z-10 pointer-events-none">
         <svg
-          viewBox="0 0 1440 64"
+          viewBox="0 0 1440 120"
           preserveAspectRatio="none"
-          className="w-full h-8 sm:h-11 md:h-14 fill-white block"
+          className="w-full h-16 sm:h-24 md:h-32 lg:h-40 fill-white block"
         >
-          <path d="M 0,26 Q 720,0 1440,26 L 1440,64 L 0,64 Z" />
+          <path d="M 0,105 Q 720,0 1440,105 L 1440,120 L 0,120 Z" />
         </svg>
       </div>
 

@@ -76,7 +76,7 @@ export default function UniversitiesPage() {
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#062B68] tracking-tight leading-[1.12] mb-4 font-serif">
               Find Your Perfect <br />
-              <span className="text-[#2563EB]">University</span>
+              <span className="text-[#F4A51C]">University</span>
             </h1>
 
             {/* Subtitle */}
