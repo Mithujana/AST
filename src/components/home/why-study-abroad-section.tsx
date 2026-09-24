@@ -28,8 +28,31 @@ const BENEFITS = [
 
 export default function WhyStudyAbroadSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-20 bg-white relative overflow-hidden">
+      {/* Decorative Loop-the-loop Flight Trail */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 0.75, scale: 1 }}
+        viewport={{ once: true }}
+        animate={{
+          y: [0, -10, 0],
+          rotate: [0, 1.5, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute -top-10 -left-10 w-72 md:w-96 pointer-events-none select-none z-0"
+      >
+        <img
+          src="/images/plane-trail-2.png"
+          alt="Looping Flight Trail"
+          className="w-full h-auto opacity-70"
+        />
+      </motion.div>
+
+      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Image Side */}
@@ -60,6 +83,29 @@ export default function WhyStudyAbroadSection() {
                 </div>
               </div>
             </div>
+
+            {/* 3D Floating Travel Passport & Boarding Pass */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 6 }}
+              viewport={{ once: true }}
+              animate={{
+                y: [0, -8, 0],
+                rotate: [6, 9, 6],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute -top-10 -right-6 sm:-right-10 w-32 sm:w-40 md:w-48 z-20 pointer-events-none select-none drop-shadow-2xl hidden sm:block"
+            >
+              <img
+                src="/images/travel-passport.png"
+                alt="Study Abroad Passport and Boarding Ticket"
+                className="w-full h-auto drop-shadow-xl"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Content Side */}

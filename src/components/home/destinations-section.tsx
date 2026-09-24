@@ -7,8 +7,31 @@ import { DESTINATIONS } from "@/data/destinations";
 
 export default function DestinationsSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
+      {/* Decorative Plane Trail with Map Pin */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 0.8, x: 0 }}
+        viewport={{ once: true }}
+        animate={{
+          y: [0, -8, 0],
+          x: [0, 4, 0],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-6 right-4 sm:right-16 md:right-28 w-60 sm:w-72 md:w-80 pointer-events-none select-none z-0"
+      >
+        <img
+          src="/images/plane-trail-3.png"
+          alt="Flight Destination Trail"
+          className="w-full h-auto drop-shadow-sm opacity-80"
+        />
+      </motion.div>
+
+      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

@@ -17,8 +17,31 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-24 bg-gray-50 overflow-hidden relative">
+      {/* 3D Floating Travel Compass */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+        whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+        viewport={{ once: true }}
+        animate={{
+          y: [0, -8, 0],
+          rotate: [0, 4, 0],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-6 right-6 sm:right-16 md:right-28 w-28 sm:w-36 md:w-44 pointer-events-none select-none z-0 hidden sm:block drop-shadow-2xl"
+      >
+        <img
+          src="/images/travel-compass.png"
+          alt="Travel Navigation Compass"
+          className="w-full h-auto drop-shadow-xl opacity-90"
+        />
+      </motion.div>
+
+      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

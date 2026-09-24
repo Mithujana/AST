@@ -198,6 +198,29 @@ export default function JourneyTimeline() {
 
         {/* Desktop Horizontal Curved Timeline */}
         <div className="hidden lg:block relative mt-4 pb-4">
+          {/* Floating Plane Trail above steps 6 & 7 */}
+          <motion.div
+            initial={{ opacity: 0, x: 20, y: 10 }}
+            whileInView={{ opacity: 0.85, x: 0, y: 0 }}
+            viewport={{ once: true }}
+            animate={{
+              y: [0, -6, 0],
+              x: [0, 3, 0],
+            }}
+            transition={{
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+              x: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+              opacity: { duration: 0.8 },
+            }}
+            className="absolute -top-14 right-16 w-64 pointer-events-none z-20 select-none"
+          >
+            <img
+              src="/images/plane-trail-1.png"
+              alt="Flight Trail"
+              className="w-full h-auto drop-shadow-sm"
+            />
+          </motion.div>
+
           {/* Sinuous SVG Wave Line connecting all 7 steps */}
           <div className="absolute top-[30px] left-0 w-full h-[64px] pointer-events-none z-0">
             <svg

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 220" width="1100" height="440">
+  <defs>
+    <linearGradient id="trailGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#0284c7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+  <path d="M 30 60 C 150 20, 190 190, 320 180 C 400 170, 440 100, 510 70" 
+        fill="none" stroke="url(#trailGrad4)" stroke-width="2.5" stroke-linecap="round" />
+  
+  <g transform="translate(260,150) rotate(125) scale(1.2)">
+    <path d="M0,-16 C1.5,-16 2.5,-11 2.5,-2 L14,5 C15.5,5.5 15,7 13.5,7 L2.5,5 L2.5,10.5 L6.5,13.5 C7,14 6.8,15 5.8,15 L0,13.5 L-5.8,15 C-6.8,15 -7,14 -6.5,13.5 L-2.5,10.5 L-2.5,5 L-13.5,7 C-15,7 -15.5,5.5 -14,5 L-2.5,-2 C-2.5,-11 -1.5,-16 0,-16 Z" 
+          fill="#0284c7" />
+  </g>
+
+</svg>

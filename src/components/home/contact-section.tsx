@@ -14,8 +14,31 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-white" id="contact-form">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-24 bg-white relative overflow-hidden" id="contact-form">
+      {/* Decorative Flight Trail */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 0.7, scale: 1 }}
+        viewport={{ once: true }}
+        animate={{
+          y: [0, -8, 0],
+          x: [0, 4, 0],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-6 right-8 md:right-24 w-60 md:w-72 pointer-events-none select-none z-0"
+      >
+        <img
+          src="/images/plane-trail-3.png"
+          alt="Flight Trail"
+          className="w-full h-auto opacity-70"
+        />
+      </motion.div>
+
+      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -100,6 +123,29 @@ export default function ContactSection() {
                   </div>
                 </div>
               </div>
+
+              {/* 3D Floating Travel Suitcase */}
+              <motion.div
+                initial={{ opacity: 0, y: 30, rotate: -4 }}
+                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                viewport={{ once: true }}
+                animate={{
+                  y: [0, -8, 0],
+                  rotate: [0, 2, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -bottom-10 -right-8 w-36 sm:w-44 md:w-52 pointer-events-none select-none z-20 hidden lg:block drop-shadow-2xl"
+              >
+                <img
+                  src="/images/travel-suitcase.png"
+                  alt="Travel Suitcase with Stickers"
+                  className="w-full h-auto drop-shadow-xl"
+                />
+              </motion.div>
             </div>
           </motion.div>
 

@@ -10,6 +10,29 @@ export default function ServicesSection() {
     <section className="py-20 bg-light-blue relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-white/40 blur-3xl rounded-full transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+      {/* Floating S-Curve Flight Trail */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 0.75, x: 0 }}
+        viewport={{ once: true }}
+        animate={{
+          y: [0, -8, 0],
+          x: [0, 4, 0],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-12 left-4 md:left-12 w-64 md:w-80 pointer-events-none select-none z-0"
+      >
+        <img
+          src="/images/plane-trail-4.png"
+          alt="Flight Wave Trail"
+          className="w-full h-auto opacity-75"
+        />
+      </motion.div>
       
       <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
