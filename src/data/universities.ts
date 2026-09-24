@@ -1,9 +1,20 @@
-export const UNIVERSITIES = [
+export interface University {
+  id: string;
+  name: string;
+  country: string;
+  description: string;
+  image: string;
+  popularAreas: string[];
+  level: string;
+}
+
+export const UNIVERSITIES: University[] = [
   {
     id: "oxford-brookes",
     name: "Oxford Brookes University",
     country: "United Kingdom",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop",
+    description: "A globally recognized university offering diverse programs and exceptional learning experiences.",
+    image: "/images/universities/oxford-brookes.jpg",
     popularAreas: ["Business", "Architecture", "Hospitality"],
     level: "Undergraduate & Postgraduate",
   },
@@ -11,7 +22,8 @@ export const UNIVERSITIES = [
     id: "monash-university",
     name: "Monash University",
     country: "Australia",
-    image: "https://images.unsplash.com/photo-1629235882260-d7a8e841269e?q=80&w=2056&auto=format&fit=crop",
+    description: "A leading global university known for innovation, research and real-world impact.",
+    image: "/images/universities/monash.jpg",
     popularAreas: ["Engineering", "Medicine", "IT"],
     level: "All Levels",
   },
@@ -19,15 +31,44 @@ export const UNIVERSITIES = [
     id: "university-toronto",
     name: "University of Toronto",
     country: "Canada",
-    image: "https://images.unsplash.com/photo-1555562725-78e7278d6bba?q=80&w=2070&auto=format&fit=crop",
+    description: "One of the world's top research universities, driving innovation and excellence.",
+    image: "/images/universities/toronto.jpg",
     popularAreas: ["Computer Science", "Finance", "Life Sciences"],
+    level: "All Levels",
+  },
+  {
+    id: "university-manchester",
+    name: "University of Manchester",
+    country: "United Kingdom",
+    description: "A pioneer in research and innovation with a strong global reputation.",
+    image: "/images/universities/manchester.jpg",
+    popularAreas: ["Data Science", "Engineering", "Business"],
+    level: "Undergraduate & Postgraduate",
+  },
+  {
+    id: "university-melbourne",
+    name: "University of Melbourne",
+    country: "Australia",
+    description: "A world-leading university known for academic excellence and vibrant campus life.",
+    image: "/images/universities/melbourne.jpg",
+    popularAreas: ["Medicine", "Law", "Arts"],
+    level: "Undergraduate & Postgraduate",
+  },
+  {
+    id: "mcgill-university",
+    name: "McGill University",
+    country: "Canada",
+    description: "A prestigious institution offering a diverse range of programs and global opportunities.",
+    image: "/images/universities/mcgill.jpg",
+    popularAreas: ["Political Science", "Economics", "Life Sciences"],
     level: "All Levels",
   },
   {
     id: "tum-germany",
     name: "Technical University of Munich",
     country: "Europe",
-    image: "https://images.unsplash.com/photo-1598257006626-48b0c252070d?q=80&w=2070&auto=format&fit=crop",
+    description: "One of Europe's top universities for engineering, natural sciences, and technology innovation.",
+    image: "/images/universities/tum.jpg",
     popularAreas: ["Engineering", "Physics", "Informatics"],
     level: "Undergraduate & Postgraduate",
   },
@@ -35,7 +76,8 @@ export const UNIVERSITIES = [
     id: "university-tokyo",
     name: "The University of Tokyo",
     country: "Japan",
-    image: "https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=2070&auto=format&fit=crop",
+    description: "Japan's premier institution renowned for cutting-edge research and global academic impact.",
+    image: "/images/universities/tokyo.jpg",
     popularAreas: ["Robotics", "Economics", "Arts"],
     level: "Undergraduate & Postgraduate",
   },
@@ -43,8 +85,10 @@ export const UNIVERSITIES = [
     id: "nus-singapore",
     name: "National University of Singapore",
     country: "Asia",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop",
+    description: "A leading global university shaping future leaders across enterprise and technology.",
+    image: "/images/universities/nus.jpg",
     popularAreas: ["Business Analytics", "Engineering", "Law"],
     level: "All Levels",
-  }
+  },
 ];
+

@@ -152,7 +152,7 @@ export default function JourneyTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.25em] text-[#0284c7] uppercase mb-1.5"
+            className="text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.25em] text-[#F4A51C] uppercase mb-1.5"
           >
             YOUR GLOBAL EDUCATION JOURNEY
           </motion.p>
@@ -162,12 +162,12 @@ export default function JourneyTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-extrabold text-[#062B68] tracking-tight leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-extrabold text-[#062B68] tracking-tight leading-tight"
           >
-            <span className="font-serif italic font-medium mr-2 text-[#081e3e]">Your Journey</span>
-            <span className="relative inline-block text-[#0284c7]">
+            <span className="font-serif italic font-medium mr-2.5 text-[#081e3e]">Your Journey</span>
+            <span className="relative inline-block text-[#F4A51C]">
               Starts Here
-              {/* Decorative wave underline */}
+              {/* Decorative wave underline in theme orange */}
               <svg
                 className="absolute -bottom-1.5 left-0 w-full overflow-visible"
                 height="7"
@@ -176,7 +176,7 @@ export default function JourneyTimeline() {
               >
                 <path
                   d="M 1 5 Q 50 1 99 5"
-                  stroke="#38bdf8"
+                  stroke="#F4A51C"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   fill="none"
@@ -314,7 +314,7 @@ export default function JourneyTimeline() {
                 >
                   {/* Step Number */}
                   <span
-                    className="text-[14px] font-bold tracking-tight mb-1.5 transition-transform duration-300 group-hover:-translate-y-0.5"
+                    className="text-[15px] xl:text-[16px] font-bold tracking-tight mb-1.5 transition-transform duration-300 group-hover:-translate-y-0.5"
                     style={{ color: step.numColor }}
                   >
                     {step.number}
@@ -330,7 +330,7 @@ export default function JourneyTimeline() {
 
                     {/* Outer translucent halo ring */}
                     <div
-                      className="w-[62px] h-[62px] rounded-full p-[4px] transition-all duration-300 group-hover:scale-105"
+                      className="w-[64px] h-[64px] rounded-full p-[4px] transition-all duration-300 group-hover:scale-105"
                       style={{
                         backgroundColor: step.ringColor,
                         boxShadow: `0 8px 20px -3px ${step.glowColor}`,
@@ -343,18 +343,18 @@ export default function JourneyTimeline() {
                           background: step.bgGradient,
                         }}
                       >
-                        <Icon className="w-5 h-5 text-white transform group-hover:scale-110 transition-transform duration-300 drop-shadow-sm" />
+                        <Icon className="w-5.5 h-5.5 text-white transform group-hover:scale-110 transition-transform duration-300 drop-shadow-sm" />
                       </div>
                     </div>
                   </div>
 
-                  {/* Step Title */}
-                  <h3 className="text-[13px] xl:text-[14px] font-bold text-[#071f43] mt-2 leading-snug tracking-tight px-1 group-hover:text-[#0284c7] transition-colors duration-200 min-h-[34px] flex items-center justify-center">
+                  {/* Step Title (Increased Font Size) */}
+                  <h3 className="text-[14px] xl:text-[15.5px] font-bold text-[#071f43] mt-2.5 leading-snug tracking-tight px-1 group-hover:text-[#F4A51C] transition-colors duration-200 min-h-[38px] flex items-center justify-center">
                     {step.title}
                   </h3>
 
-                  {/* Step Description */}
-                  <p className="text-[11px] xl:text-[12px] text-gray-500 leading-normal mt-0.5 px-1 max-w-[145px]">
+                  {/* Step Description (Increased Font Size) */}
+                  <p className="text-[12px] xl:text-[13px] text-gray-500 leading-snug mt-1 px-1 max-w-[155px] font-normal">
                     {step.description}
                   </p>
                 </motion.div>
@@ -366,7 +366,7 @@ export default function JourneyTimeline() {
         {/* Mobile & Tablet Responsive Layout */}
         <div className="lg:hidden mt-4">
           {/* Horizontal scrollable track on small tablets with snap points */}
-          <div className="flex md:grid md:grid-cols-4 sm:grid-cols-2 overflow-x-auto pb-4 pt-1 gap-3 snap-x snap-mandatory scrollbar-none px-1">
+          <div className="flex md:grid md:grid-cols-4 sm:grid-cols-2 overflow-x-auto pb-4 pt-1 gap-3.5 snap-x snap-mandatory scrollbar-none px-1">
             {STEPS.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -376,11 +376,11 @@ export default function JourneyTimeline() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="flex-shrink-0 w-[220px] md:w-auto snap-center bg-white/85 backdrop-blur-md p-3.5 rounded-xl border border-blue-50 shadow-[0_4px_16px_rgba(0,0,0,0.03)] flex flex-col items-center text-center relative"
+                  className="flex-shrink-0 w-[230px] md:w-auto snap-center bg-white/85 backdrop-blur-md p-4 rounded-xl border border-blue-50 shadow-[0_4px_16px_rgba(0,0,0,0.03)] flex flex-col items-center text-center relative"
                 >
                   {/* Step Number Badge */}
                   <span
-                    className="text-[11px] font-bold px-2 py-0.5 rounded-full mb-2 bg-slate-50 border border-slate-100"
+                    className="text-xs font-bold px-2.5 py-0.5 rounded-full mb-2 bg-slate-50 border border-slate-100"
                     style={{ color: step.numColor }}
                   >
                     STEP {step.number}
@@ -388,7 +388,7 @@ export default function JourneyTimeline() {
 
                   {/* Circle Icon */}
                   <div
-                    className="w-12 h-12 rounded-full p-[3px] mb-2"
+                    className="w-13 h-13 rounded-full p-[3px] mb-2.5"
                     style={{
                       backgroundColor: step.ringColor,
                       boxShadow: `0 4px 12px -2px ${step.glowColor}`,
@@ -398,15 +398,15 @@ export default function JourneyTimeline() {
                       className="w-full h-full rounded-full flex items-center justify-center text-white border-2 border-white/80"
                       style={{ background: step.bgGradient }}
                     >
-                      <Icon className="w-4 h-4 text-white" />
+                      <Icon className="w-4.5 h-4.5 text-white" />
                     </div>
                   </div>
 
-                  <h3 className="text-sm font-bold text-[#071f43] mb-0.5">
+                  <h3 className="text-[15px] sm:text-base font-bold text-[#071f43] mb-1 leading-snug">
                     {step.title}
                   </h3>
 
-                  <p className="text-xs text-gray-500 leading-relaxed">
+                  <p className="text-[13px] sm:text-sm text-gray-500 leading-relaxed font-normal">
                     {step.description}
                   </p>
                 </motion.div>

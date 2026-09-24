@@ -28,14 +28,17 @@ export default function Footer() {
           
           {/* Brand & Description */}
           <div className="space-y-6 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 group inline-flex">
+            <Link href="/" className="flex items-center gap-3 group inline-flex">
               <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
                 <PlaneTakeoff className="w-6 h-6 text-bright-gold group-hover:scale-110 transition-transform" />
               </div>
-              <span className="text-2xl font-bold text-white tracking-tight">AST</span>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white tracking-tight leading-none">AST</span>
+                <span className="text-[10px] font-bold text-bright-gold uppercase tracking-wider mt-1">Abroad Study & Travel</span>
+              </div>
             </Link>
             <p className="text-sm leading-relaxed text-gray-400">
-              Helping students achieve their dreams through global education opportunities with expert guidance and personalized support.
+              AST (Abroad Study and Travel) is a premier overseas education and travel consultancy helping students realize their global study ambitions with trusted guidance and personalized support.
             </p>
             <div className="flex gap-4">
               <Link href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-bright-gold hover:text-navy transition-colors text-white">

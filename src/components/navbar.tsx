@@ -40,7 +40,7 @@ export default function Navbar() {
           }`}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group py-0.5">
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group py-0.5">
             <Image
               src="/ast-logo.png"
               alt="AST Abroad Study & Travel"
@@ -49,6 +49,14 @@ export default function Navbar() {
               className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-[1.02]"
               priority
             />
+            <div className="hidden sm:flex flex-col border-l border-slate-200/90 pl-2.5 sm:pl-3">
+              <span className="text-[11px] sm:text-xs font-black tracking-wider text-[#062B68] uppercase leading-tight">
+                Abroad Study & Travel
+              </span>
+              <span className="text-[9px] sm:text-[10px] font-semibold text-[#F4A51C] tracking-wide uppercase leading-tight">
+                Global Education
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation Links */}

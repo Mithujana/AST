@@ -260,7 +260,7 @@ export default function HeroSection() {
           >
             <div className="h-[2px] w-8 sm:w-10 bg-[#F4A51C] rounded-full" />
             <span className="text-[#F4A51C] font-bold uppercase tracking-[0.2em] text-xs sm:text-[13px]">
-              Your Journey. Our Guidance.
+              AST • ABROAD STUDY & TRAVEL
             </span>
           </motion.div>
 
@@ -292,7 +292,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-xs sm:text-sm md:text-[15px] text-gray-300/90 mb-7 sm:mb-8 max-w-lg leading-relaxed font-normal"
           >
-            Your trusted partner for overseas education. Helping students turn their global education dreams into reality with limitless possibilities.
+            AST (Abroad Study and Travel) is your dedicated overseas education partner. We guide you step-by-step from university selection and scholarships to visas and seamless international travel.
           </motion.p>
 
           {/* Call-To-Action Buttons */}
