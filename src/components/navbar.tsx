@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, PlaneTakeoff } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import GooeyNav from "./ui/GooeyNav";
 import SpecularButton from "./ui/SpecularButton";
 
@@ -42,10 +43,7 @@ export default function Navbar() {
       <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-navy text-white rounded-lg flex items-center justify-center">
-            <PlaneTakeoff className="w-6 h-6 text-bright-gold group-hover:scale-110 transition-transform" />
-          </div>
-          <span className="text-2xl font-bold text-navy tracking-tight">AST</span>
+          <Image src="/ast-logo.png" alt="AST Logo" width={150} height={40} className="h-12 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop Navigation */}
