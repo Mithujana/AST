@@ -109,8 +109,9 @@ const GooeyNav = ({
     updateEffectPosition(liEl);
 
     if (filterRef.current) {
-      const particles = filterRef.current.querySelectorAll('.particle');
-      particles.forEach(p => filterRef.current.removeChild(p));
+      const container = filterRef.current;
+      const particles = container.querySelectorAll('.particle');
+      particles.forEach(p => container.removeChild(p));
     }
 
     if (textRef.current) {
