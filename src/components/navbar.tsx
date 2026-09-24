@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, PlaneTakeoff } from "lucide-react";
+import GooeyNav from "./ui/GooeyNav";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -46,22 +47,18 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-royal-blue ${
-                  isActive ? "text-royal-blue font-semibold" : "text-gray-600"
-                }`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </nav>
+        <div className="hidden lg:flex items-center">
+          <GooeyNav
+            items={NAV_LINKS.map(link => ({ label: link.name, href: link.href }))}
+            particleCount={15}
+            particleDistances={[90, 10]}
+            particleR={100}
+            initialActiveIndex={NAV_LINKS.findIndex(link => pathname === link.href) >= 0 ? NAV_LINKS.findIndex(link => pathname === link.href) : 0}
+            animationTime={600}
+            timeVariance={300}
+            colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+          />
+        </div>
 
         {/* CTA Button Desktop */}
         <div className="hidden lg:block">
