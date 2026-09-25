@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SERVICES } from "@/data/services";
 
 export default function ServicesSection() {

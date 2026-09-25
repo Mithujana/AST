@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { DESTINATIONS } from "@/data/destinations";
 import CountryFlag from "@/components/ui/country-flag";
 
