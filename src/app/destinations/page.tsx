@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, GraduationCap, Calendar, Clock, DollarSign, Award, ChevronRight, Compass } from "lucide-react";
 import { DESTINATIONS } from "@/data/destinations";
 import CountryFlag from "@/components/ui/country-flag";
@@ -39,16 +40,27 @@ export default function DestinationsPage() {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
             {/* Eyebrow */}
-            <div className="flex items-center justify-center gap-3 mb-3.5">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-center gap-3 mb-3.5"
+            >
               <div className="h-[1.5px] w-10 sm:w-14 bg-[#F59E0B] rounded-full" />
               <span className="text-[#F59E0B] font-bold uppercase tracking-[0.25em] text-xs sm:text-[13px]">
                 Destinations
               </span>
               <div className="h-[1.5px] w-10 sm:w-14 bg-[#F59E0B] rounded-full" />
-            </div>
+            </motion.div>
 
             {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-[#062B68] tracking-tight mb-4">
+            <motion.h1
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-[#062B68] tracking-tight mb-4"
+            >
               Explore Your{" "}
               <span className="relative inline-block text-[#2563EB]">
                 Study
@@ -67,19 +79,29 @@ export default function DestinationsPage() {
                 </svg>
               </span>{" "}
               Destinations
-            </h1>
+            </motion.h1>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-[16px] text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-sm sm:text-base md:text-[16px] text-slate-500 max-w-2xl mx-auto leading-relaxed"
+            >
               Choose from world-class education destinations and discover opportunities around the globe.
-            </p>
+            </motion.p>
           </div>
 
           {/* 6 Country Cards Grid (Exact reference matching with landmark art) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-            {DESTINATIONS.map((dest) => (
-              <div
+            {DESTINATIONS.map((dest, index) => (
+              <motion.div
                 key={dest.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (index % 3) * 0.08 }}
                 className="group bg-gradient-to-br from-white via-white to-blue-50/20 rounded-2xl sm:rounded-[24px] p-6 sm:p-7 border border-slate-100 shadow-[0_4px_24px_rgba(0,18,60,0.05)] hover:shadow-[0_16px_36px_rgba(0,18,60,0.10)] transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between relative overflow-hidden"
               >
                 {/* Soft Blue Round Decorative Circle in Bottom-Right Corner */}
@@ -132,7 +154,7 @@ export default function DestinationsPage() {
                     <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </span>
                 </a>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -170,9 +192,13 @@ export default function DestinationsPage() {
       <section className="py-16 sm:py-24">
         <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 space-y-20 sm:space-y-28">
           {DESTINATIONS.map((dest, index) => (
-            <div
+            <motion.div
               key={dest.id}
               id={dest.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5 }}
               className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 shadow-[0_8px_30px_rgba(0,18,60,0.05)]"
             >
               <div
@@ -329,7 +355,7 @@ export default function DestinationsPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -338,7 +364,13 @@ export default function DestinationsPage() {
       {/* 4. READY TO EXPLORE BANNER                                                */}
       {/* ========================================================================= */}
       <section className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 mt-10">
-        <div className="rounded-3xl bg-gradient-to-r from-[#062B68] to-[#1e40af] p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="rounded-3xl bg-gradient-to-r from-[#062B68] to-[#1e40af] p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8"
+        >
           {/* Static Plane Trail Decorative Background */}
           <div className="absolute top-0 right-0 w-80 pointer-events-none select-none opacity-20">
             <img src="/images/plane-trail-3.png" alt="" className="w-full h-auto" />
@@ -365,7 +397,7 @@ export default function DestinationsPage() {
               <ArrowRight className="w-4 h-4 text-blue-600" />
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

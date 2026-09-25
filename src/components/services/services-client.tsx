@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { 
+import { motion } from "framer-motion";
+import {
   ArrowRight, 
   Sparkles, 
   ShieldCheck, 
@@ -305,23 +306,43 @@ export default function ServicesClient() {
         <div className="max-w-[1640px] 2xl:max-w-[1720px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 text-center w-full">
           
           {/* Tag: COMPLETE OVERSEAS EDUCATION GUIDANCE */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#F4A51C]/70 bg-[#062B68]/70 text-[#F4A51C] text-xs font-semibold uppercase tracking-wider mb-5 shadow-xs">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#F4A51C]/70 bg-[#062B68]/70 text-[#F4A51C] text-xs font-semibold uppercase tracking-wider mb-5 shadow-xs"
+          >
             <Sparkles className="w-3.5 h-3.5 text-[#F4A51C]" />
             <span>COMPLETE OVERSEAS EDUCATION GUIDANCE</span>
-          </div>
+          </motion.div>
 
           {/* Headline: Our Services */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight mb-5 font-serif">
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight mb-5 font-serif"
+          >
             Our <span className="text-[#F4A51C]">Services</span>
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="text-sm sm:text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8"
+          >
             From your <span className="font-semibold text-white">very</span> first counselling session to your first day on campus, AST provides personalized, step-by-step guidance to make studying abroad simple and stress-free.
-          </p>
+          </motion.p>
 
           {/* Two Buttons: Book Free Consultation & View All 6 Services */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="flex flex-wrap items-center justify-center gap-4 mb-12"
+          >
             <Link
               href="#consultation"
               className="inline-flex items-center gap-2 bg-[#F4A51C] hover:bg-[#E08A0A] text-[#062B68] font-bold px-7 py-3 rounded-xl transition-all shadow-md text-sm sm:text-base group"
@@ -339,11 +360,15 @@ export default function ServicesClient() {
               <span>View All 6 Services</span>
               <ChevronDown className="w-4 h-4 text-slate-300" />
             </button>
-          </div>
+          </motion.div>
 
           {/* 4 Stats Cards Bar with Soft Translucent Boxes */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-5xl lg:max-w-6xl mx-auto mb-6">
-            
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-3.5 max-w-5xl lg:max-w-6xl mx-auto mb-6"
+          >
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-2xl p-3.5 border border-white/15 text-left">
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                 <FileText className="w-5 h-5 text-white" />
@@ -384,7 +409,7 @@ export default function ServicesClient() {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -429,7 +454,12 @@ export default function ServicesClient() {
       {/* ========================================================================= */}
       {/* MOBILE STICKY NAV BAR (< lg)                                              */}
       {/* ========================================================================= */}
-      <div className="lg:hidden sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+      <motion.div
+        initial={{ opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="lg:hidden sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs"
+      >
         <div className="px-4 py-2.5 flex items-center gap-2 overflow-x-auto no-scrollbar">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider shrink-0 mr-1">
             Jump to:
@@ -454,7 +484,7 @@ export default function ServicesClient() {
             );
           })}
         </div>
-      </div>
+      </motion.div>
 
       {/* ========================================================================= */}
       {/* 2. MAIN LAYOUT: SIDEBAR + SERVICES CONTENT EXACTLY LIKE REFERENCE IMAGE   */}
@@ -474,7 +504,12 @@ export default function ServicesClient() {
             {/* DESKTOP SIDEBAR: SERVICES NAVIGATION (Matching screenshot)          */}
             {/* =================================================================== */}
             <aside className="hidden lg:block w-68 lg:w-72 xl:w-76 shrink-0 sticky top-28 self-start z-30">
-              <div className="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm">
+              <motion.div
+                initial={{ opacity: 0, x: -24 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm"
+              >
                 
                 {/* Header: SERVICES NAVIGATION + 6 Pillars badge */}
                 <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-slate-100">
@@ -563,7 +598,7 @@ export default function ServicesClient() {
                   </div>
                 </div>
 
-              </div>
+              </motion.div>
             </aside>
 
             {/* =================================================================== */}
@@ -578,9 +613,13 @@ export default function ServicesClient() {
                 // ===================================================================
                 if (isFirst) {
                   return (
-                    <section
+                    <motion.section
                       key={service.id}
                       id={service.id}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5 }}
                       className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
                     >
                       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
@@ -724,7 +763,7 @@ export default function ServicesClient() {
                         </div>
 
                       </div>
-                    </section>
+                    </motion.section>
                   );
                 }
 
@@ -733,9 +772,13 @@ export default function ServicesClient() {
                 // ===================================================================
                 if (service.id === "university-selection") {
                   return (
-                    <section
+                    <motion.section
                       key={service.id}
                       id={service.id}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5 }}
                       className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
                     >
                       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
@@ -977,7 +1020,7 @@ export default function ServicesClient() {
                         </div>
 
                       </div>
-                    </section>
+                    </motion.section>
                   );
                 }
 
@@ -986,9 +1029,13 @@ export default function ServicesClient() {
                 // ===================================================================
                 if (service.id === "visa-assistance") {
                   return (
-                    <section
+                    <motion.section
                       key={service.id}
                       id={service.id}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5 }}
                       className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
                     >
                       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
@@ -1213,7 +1260,7 @@ export default function ServicesClient() {
                         </div>
 
                       </div>
-                    </section>
+                    </motion.section>
                   );
                 }
 
@@ -1222,9 +1269,13 @@ export default function ServicesClient() {
                 // ===================================================================
                 if (service.id === "travel-support") {
                   return (
-                    <section
+                    <motion.section
                       key={service.id}
                       id={service.id}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5 }}
                       className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
                     >
                       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
@@ -1450,7 +1501,7 @@ export default function ServicesClient() {
                         </div>
 
                       </div>
-                    </section>
+                    </motion.section>
                   );
                 }
 
@@ -1459,9 +1510,13 @@ export default function ServicesClient() {
                 // ===================================================================
                 if (service.id === "accommodation" || service.id === "accommodation-guidance") {
                   return (
-                    <section
+                    <motion.section
                       key={service.id}
                       id={service.id}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5 }}
                       className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
                     >
                       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
@@ -1683,7 +1738,7 @@ export default function ServicesClient() {
                         </div>
 
                       </div>
-                    </section>
+                    </motion.section>
                   );
                 }
 
@@ -1692,9 +1747,13 @@ export default function ServicesClient() {
                 // ===================================================================
                 if (service.id === "pre-departure" || service.id === "predeparture-briefing") {
                   return (
-                    <section
+                    <motion.section
                       key={service.id}
                       id={service.id}
+                      initial={{ opacity: 0, y: 28 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5 }}
                       className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
                     >
                       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
@@ -1915,23 +1974,27 @@ export default function ServicesClient() {
                         </div>
 
                       </div>
-                    </section>
+                    </motion.section>
                   );
                 }
 
                 // Fallback for any other services
                 const Icon = service.icon;
                 return (
-                  <section
+                  <motion.section
                     key={service.id}
                     id={service.id}
+                    initial={{ opacity: 0, y: 28 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.5 }}
                     className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors"
                   >
                     <div className="flex items-center gap-3">
                       <Icon className="w-6 h-6 text-[#0B4EA2]" />
                       <h2 className="text-2xl font-bold text-[#062B68]">{service.title}</h2>
                     </div>
-                  </section>
+                  </motion.section>
                 );
               })}
             </main>

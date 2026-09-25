@@ -1,4 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 export function LegalHero({
   title,
@@ -11,10 +14,22 @@ export function LegalHero({
     <section className="bg-navy py-16 sm:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/dotted-world-map.svg')] bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none" />
       <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-serif">
+        <motion.h1
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-serif"
+        >
           {title}
-        </h1>
-        <p className="text-sm text-gray-300">Last updated: {lastUpdated}</p>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-sm text-gray-300"
+        >
+          Last updated: {lastUpdated}
+        </motion.p>
       </div>
     </section>
   );
@@ -26,7 +41,11 @@ export function LegalTableOfContents({
   items: { id: string; label: string }[];
 }) {
   return (
-    <nav
+    <motion.nav
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       aria-label="Table of contents"
       className="bg-[#F5F9FF] border border-slate-100 rounded-2xl p-6 sm:p-7 mb-12"
     >
@@ -45,7 +64,7 @@ export function LegalTableOfContents({
           </li>
         ))}
       </ol>
-    </nav>
+    </motion.nav>
   );
 }
 
@@ -59,14 +78,21 @@ export function LegalSection({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-28 mb-10">
+    <motion.section
+      id={id}
+      initial={{ opacity: 0, y: 22 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5 }}
+      className="scroll-mt-28 mb-10"
+    >
       <h2 className="text-xl sm:text-2xl font-bold text-navy mb-4 font-serif">
         {title}
       </h2>
       <div className="space-y-4 text-slate-600 text-sm sm:text-[15px] leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-royal-blue [&_a]:hover:underline [&_strong]:text-slate-800">
         {children}
       </div>
-    </section>
+    </motion.section>
   );
 }
 

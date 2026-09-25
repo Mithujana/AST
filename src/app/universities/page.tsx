@@ -64,7 +64,12 @@ export default function UniversitiesPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
           
           {/* Left Column: Eyebrow + Heading + Subtitle */}
-          <div className="lg:col-span-5 pt-2">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 pt-2"
+          >
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-3">
               <span className="text-[#062B68] font-bold uppercase tracking-[0.25em] text-[11px] sm:text-xs">
@@ -83,10 +88,15 @@ export default function UniversitiesPage() {
             <p className="text-slate-500 text-xs sm:text-sm md:text-[15px] leading-relaxed max-w-md">
               Discover world-class institutions and programs tailored to your academic journey.
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Column: 3 Stats Counters + Search Bar + Country Filter Pills */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
             
             {/* 3 Stats Counters Row */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-6 pb-2 border-b border-slate-100 sm:border-none">
@@ -221,14 +231,19 @@ export default function UniversitiesPage() {
               )}
             </AnimatePresence>
 
-          </div>
+          </motion.div>
         </div>
 
         {/* ========================================================================= */}
         {/* UNIVERSITY CARDS GRID (MATCHING REFERENCE DESIGN WITH THEME COLORS)       */}
         {/* ========================================================================= */}
         {filteredUniversities.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-3xl border border-slate-100 p-8 shadow-xs">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-center py-20 bg-white rounded-3xl border border-slate-100 p-8 shadow-xs"
+          >
             <Building2 className="w-12 h-12 text-slate-300 mx-auto mb-3" />
             <h3 className="text-lg font-bold text-[#062B68] mb-1">No universities found</h3>
             <p className="text-slate-500 text-xs sm:text-sm mb-4">
@@ -244,7 +259,7 @@ export default function UniversitiesPage() {
             >
               Reset Filters
             </button>
-          </div>
+          </motion.div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {filteredUniversities.map((uni, index) => (
@@ -328,7 +343,13 @@ export default function UniversitiesPage() {
         {/* ========================================================================= */}
         {/* COUNSELING / APPLICATION CALLOUT BANNER                                   */}
         {/* ========================================================================= */}
-        <div className="mt-16 sm:mt-20 rounded-3xl bg-gradient-to-r from-[#062B68] via-[#0A4EA3] to-[#1E40AF] p-8 sm:p-12 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-16 sm:mt-20 rounded-3xl bg-gradient-to-r from-[#062B68] via-[#0A4EA3] to-[#1E40AF] p-8 sm:p-12 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
+        >
           <div className="relative z-10 max-w-xl">
             <span className="text-amber-400 font-bold tracking-wider text-xs uppercase mb-2 block">
               Direct University Admissions
@@ -350,7 +371,7 @@ export default function UniversitiesPage() {
               <ArrowRight className="w-4 h-4 text-blue-600" />
             </Link>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>
