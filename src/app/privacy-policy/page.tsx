@@ -244,14 +244,14 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>
               Email:{" "}
-              <a href="mailto:info@astabroadstudy.com">
-                info@astabroadstudy.com
+              <a href="mailto:adhigroupofcompany@gmail.com">
+                adhigroupofcompany@gmail.com
               </a>
             </li>
             <li>
               Phone: <a href="tel:+94760344695">+94 76 034 4695</a>
             </li>
-            <li>Address: 123 Education Boulevard, Colombo, Sri Lanka</li>
+            <li>Address: Chankanai East, Chankanai, Jaffna, Sri Lanka</li>
           </ul>
           <p>
             You may also reach us through our{" "}

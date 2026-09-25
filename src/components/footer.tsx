@@ -102,15 +102,15 @@ export default function Footer() {
               </li>
               <li className="flex flex-col">
                 <span className="text-gray-400 mb-1">Email</span>
-                <a href="mailto:info@astabroadstudy.com" className="text-white font-medium hover:text-bright-gold transition-colors">
-                  info@astabroadstudy.com
+                <a href="mailto:adhigroupofcompany@gmail.com" className="text-white font-medium hover:text-bright-gold transition-colors">
+                  adhigroupofcompany@gmail.com
                 </a>
               </li>
               <li className="flex flex-col">
                 <span className="text-gray-400 mb-1">Address</span>
                 <span className="text-white">
-                  123 Education Boulevard,<br />
-                  Colombo, Sri Lanka
+                  Chankanai East, Chankanai,<br />
+                  Jaffna, Sri Lanka
                 </span>
               </li>
             </ul>
