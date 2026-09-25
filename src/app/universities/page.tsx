@@ -3,8 +3,8 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ArrowRight, MapPin, SlidersHorizontal, BookOpen, GraduationCap, Building2 } from "lucide-react";
-import { UNIVERSITIES, University } from "@/data/universities";
+import { Search, ArrowRight, MapPin, SlidersHorizontal, GraduationCap, Building2 } from "lucide-react";
+import { UNIVERSITIES } from "@/data/universities";
 
 const CATEGORIES = [
   "All",
