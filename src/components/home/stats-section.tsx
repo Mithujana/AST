@@ -32,7 +32,7 @@ const STATS = [
 
 export default function StatsSection() {
   return (
-    <section className="relative z-20 -mt-12 mb-16 max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="relative z-20 -mt-12 mb-16 max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7">
       <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100">
           {STATS.map((stat, index) => (

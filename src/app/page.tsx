@@ -1,5 +1,4 @@
 import HeroSection from "@/components/home/hero-section";
-import StatsSection from "@/components/home/stats-section";
 import DestinationsSection from "@/components/home/destinations-section";
 import WhyStudyAbroadSection from "@/components/home/why-study-abroad-section";
 import ServicesSection from "@/components/home/services-section";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
       <DestinationsSection />
       <WhyStudyAbroadSection />
       <ServicesSection />

@@ -17,14 +17,30 @@ export default function ConsultationModal() {
         setIsOpen(false);
       }
     };
-    
+
     checkHash();
     window.addEventListener("hashchange", checkHash);
-    return () => window.removeEventListener("hashchange", checkHash);
+
+    // Next.js's <Link> intercepts clicks and navigates via history.pushState,
+    // which never fires a native "hashchange" event. Fall back to catching the
+    // click directly so the modal still opens when the hash doesn't "change"
+    // through the browser's own navigation.
+    const handleClick = (e: MouseEvent) => {
+      const anchor = (e.target as HTMLElement)?.closest("a");
+      if (anchor && anchor.hash === "#consultation") {
+        setIsOpen(true);
+      }
+    };
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("hashchange", checkHash);
+      document.removeEventListener("click", handleClick);
+    };
   }, []);
 
   const closeModal = () => {
-    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    window.history.pushState(null, "", window.location.pathname + window.location.search);
     setIsOpen(false);
     setTimeout(() => setIsSubmitted(false), 300); // Reset after close animation
   };

@@ -14,8 +14,17 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-24 bg-white" id="contact-form">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-24 bg-white relative overflow-hidden" id="contact-form">
+      {/* Static Decorative Flight Trail */}
+      <div className="absolute top-6 right-8 md:right-24 w-60 md:w-72 pointer-events-none select-none z-0 opacity-40">
+        <img
+          src="/images/plane-trail-3.png"
+          alt="Flight Trail"
+          className="w-full h-auto"
+        />
+      </div>
+
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -99,6 +108,15 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              {/* Static Travel Suitcase Decorative Accent */}
+              <div className="absolute -bottom-10 -right-8 w-36 sm:w-44 md:w-52 pointer-events-none select-none z-20 hidden lg:block drop-shadow-2xl">
+                <img
+                  src="/images/travel-suitcase.png"
+                  alt="Travel Suitcase with Stickers"
+                  className="w-full h-auto drop-shadow-xl"
+                />
               </div>
             </div>
           </motion.div>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 250" width="1100" height="500">
+  <defs>
+    <linearGradient id="trailGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+  <!-- Map Pin origin -->
+  <g transform="translate(60, 200)">
+    <circle cx="0" cy="0" r="4.5" fill="#0284c7" />
+    <circle cx="0" cy="0" r="9" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.6" />
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" opacity="0.4" />
+  </g>
+  <path d="M 60 200 C 160 200, 250 160, 340 95 C 410 45, 460 35, 510 25" 
+        fill="none" stroke="url(#trailGrad3)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 5" />
+  
+  <g transform="translate(510,25) rotate(78) scale(1.3)">
+    <path d="M0,-16 C1.5,-16 2.5,-11 2.5,-2 L14,5 C15.5,5.5 15,7 13.5,7 L2.5,5 L2.5,10.5 L6.5,13.5 C7,14 6.8,15 5.8,15 L0,13.5 L-5.8,15 C-6.8,15 -7,14 -6.5,13.5 L-2.5,10.5 L-2.5,5 L-13.5,7 C-15,7 -15.5,5.5 -14,5 L-2.5,-2 C-2.5,-11 -1.5,-16 0,-16 Z" 
+          fill="#0284c7" />
+  </g>
+
+</svg>

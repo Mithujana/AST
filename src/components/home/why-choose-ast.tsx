@@ -20,7 +20,7 @@ export default function WhyChooseAst() {
       {/* Abstract Background Element */}
       <div className="absolute right-0 top-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-royal-blue/20 via-navy to-navy pointer-events-none" />
 
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <motion.div

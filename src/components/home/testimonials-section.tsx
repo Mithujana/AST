@@ -17,8 +17,17 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-24 bg-gray-50 overflow-hidden relative">
+      {/* Static 3D Travel Compass Background Decor */}
+      <div className="absolute top-8 right-6 sm:right-16 md:right-28 w-24 sm:w-32 md:w-36 pointer-events-none select-none z-0 hidden sm:block opacity-25 rotate-12">
+        <img
+          src="/images/travel-compass.png"
+          alt=""
+          className="w-full h-auto drop-shadow-md"
+        />
+      </div>
+
+      <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
