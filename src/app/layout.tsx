@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="antialiased bg-white text-gray-900 min-h-screen flex flex-col">
+    <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="antialiased bg-white text-gray-900 min-h-screen flex flex-col" suppressHydrationWarning>
         <Navbar />
         <main className="flex-grow">
           {children}

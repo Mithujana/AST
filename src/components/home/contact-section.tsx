@@ -26,7 +26,7 @@ export default function ContactSection() {
 
       <div className="max-w-[1560px] mx-auto px-3 sm:px-5 lg:px-7 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ export default function ContactSection() {
           >
             Start Your Journey Today
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -57,7 +57,7 @@ export default function ContactSection() {
           >
             <div className="bg-light-blue rounded-3xl p-8 md:p-10 border border-gray-100">
               <h3 className="text-2xl font-bold text-navy mb-8">Get In Touch</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
@@ -78,7 +78,7 @@ export default function ContactSection() {
                   <div>
                     <p className="text-sm font-medium text-gray-500 mb-1">Email</p>
                     <a href="mailto:info@astabroadstudy.com" className="text-lg font-bold text-navy hover:text-royal-blue transition-colors break-all">
-                      info@astabroadstudy.com
+                      adhigropofcompany@gmail.com
                     </a>
                   </div>
                 </div>
@@ -90,8 +90,8 @@ export default function ContactSection() {
                   <div>
                     <p className="text-sm font-medium text-gray-500 mb-1">Office Address</p>
                     <p className="text-lg font-medium text-navy leading-relaxed">
-                      123 Education Boulevard,<br />
-                      Colombo, Sri Lanka
+                      Chankanai East, Chankanai,<br />
+                      Jaffna, Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function ContactSection() {
                     <p className="text-sm font-medium text-gray-500 mb-1">Opening Hours</p>
                     <p className="text-lg font-medium text-navy leading-relaxed">
                       Monday – Saturday<br />
-                      9:00 AM – 5:00 PM
+                      8:00 AM – 6:00 PM
                     </p>
                   </div>
                 </div>
