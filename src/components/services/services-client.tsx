@@ -32,7 +32,8 @@ import {
   BarChart3,
   Lightbulb,
   Handshake,
-  Star
+  Star,
+  MapPin
 } from "lucide-react";
 
 // 6 Core Services data with specific icons & features matching the reference image exactly
@@ -909,14 +910,69 @@ export default function ServicesClient() {
 
                         </div>
 
-                        {/* RIGHT COLUMN: Gothic University Campus Graphic with Badges */}
-                        <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
-                          <div className="relative w-full max-w-[400px] flex items-center justify-center">
-                            <img
-                              src="/images/services-university-graphic.png"
-                              alt="Top Global Universities & Course Selection"
-                              className="w-full h-auto object-contain drop-shadow-sm select-none"
-                            />
+                        {/* RIGHT COLUMN: Real High-Res Campus Photo with Interactive Floating Cards */}
+                        <div className="w-full lg:w-[350px] xl:w-[400px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
+                          <div className="relative w-full max-w-[380px] aspect-4/3 sm:aspect-square rounded-[36px] bg-gradient-to-tr from-amber-100/60 via-blue-50/40 to-transparent p-2.5 flex items-center justify-center overflow-hidden border border-blue-100/60 shadow-2xs group">
+                            
+                            {/* Ambient Warm Sun Aura Disc in Background */}
+                            <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-gradient-to-br from-[#F4A51C]/25 to-amber-200/10 blur-2xl pointer-events-none" />
+
+                            {/* Real High-Res Gothic University Campus Photo */}
+                            <div className="relative w-full h-full rounded-[28px] overflow-hidden">
+                              <img
+                                src="/images/services-university-campus.jpg"
+                                alt="Top Global Universities & Course Selection"
+                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#062B68]/70 via-[#062B68]/15 to-transparent pointer-events-none" />
+                              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[28px] pointer-events-none" />
+                            </div>
+
+                            {/* Floating Card 1: Top Global Universities with Country Flags */}
+                            <div className="absolute top-4 left-4 right-4 sm:top-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 shadow-lg border border-white/80 ring-1 ring-blue-100/60 transition-transform duration-300 hover:scale-[1.02] z-20">
+                              <div className="flex items-center justify-between mb-1.5">
+                                <div className="flex items-center gap-1.5">
+                                  <GraduationCap className="w-4 h-4 text-[#0066FF]" />
+                                  <span className="text-xs font-bold text-[#062B68]">Top Global Universities</span>
+                                </div>
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#0066FF] border border-blue-100">
+                                  Direct Apply
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-1.5 pt-1 flex-wrap">
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100/90 text-[11px] font-medium text-slate-700">
+                                  🇬🇧 UK
+                                </span>
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100/90 text-[11px] font-medium text-slate-700">
+                                  🇺🇸 USA
+                                </span>
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100/90 text-[11px] font-medium text-slate-700">
+                                  🇨🇦 Canada
+                                </span>
+                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100/90 text-[11px] font-medium text-slate-700">
+                                  🇦🇺 Australia
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Floating Card 2: 300+ Partner Campuses */}
+                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-lg border border-white/80 ring-1 ring-blue-100/60 z-20 transition-transform duration-300 hover:scale-[1.02]">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2.5">
+                                  <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-[#F4A51C] flex items-center justify-center shrink-0 border border-amber-500/20">
+                                    <Star className="w-4 h-4 fill-[#F4A51C]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs font-bold text-[#062B68]">300+ Partner Campuses</div>
+                                    <div className="text-[11px] text-slate-500">Fast-Track Offer Letters & Grants</div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50 text-[#0066FF] flex items-center justify-center shrink-0">
+                                  <ChevronRight className="w-3.5 h-3.5" />
+                                </div>
+                              </div>
+                            </div>
+
                           </div>
                         </div>
 
@@ -1097,14 +1153,62 @@ export default function ServicesClient() {
 
                         </div>
 
-                        {/* RIGHT COLUMN: Student Passport & Visa Approval Graphic */}
-                        <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
-                          <div className="relative w-full max-w-[400px] flex items-center justify-center">
-                            <img
-                              src="/images/services-visa-graphic.png"
-                              alt="Visa Assistance & Compliance"
-                              className="w-full h-auto object-contain drop-shadow-sm select-none"
-                            />
+                        {/* RIGHT COLUMN: Real High-Res Visa Student Photo with Floating Verification Badges */}
+                        <div className="w-full lg:w-[350px] xl:w-[400px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
+                          <div className="relative w-full max-w-[380px] aspect-4/3 sm:aspect-square rounded-[36px] bg-gradient-to-tr from-emerald-100/50 via-blue-50/40 to-transparent p-2.5 flex items-center justify-center overflow-hidden border border-blue-100/60 shadow-2xs group">
+                            
+                            {/* Ambient Soft Glow */}
+                            <div className="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-emerald-400/15 blur-2xl pointer-events-none" />
+
+                            {/* Real High-Res Student Passport Photo */}
+                            <div className="relative w-full h-full rounded-[28px] overflow-hidden">
+                              <img
+                                src="/images/services-visa-student.jpg"
+                                alt="Visa Assistance & Student Passport Verification"
+                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#062B68]/70 via-[#062B68]/15 to-transparent pointer-events-none" />
+                              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[28px] pointer-events-none" />
+                            </div>
+
+                            {/* Floating Card 1: Visa Approved Success Banner */}
+                            <div className="absolute top-4 left-4 right-4 sm:top-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 shadow-lg border border-white/80 ring-1 ring-blue-100/60 transition-transform duration-300 hover:scale-[1.02] z-20">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2.5">
+                                  <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
+                                    <CheckCircle2 className="w-4 h-4" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs font-bold text-[#062B68]">Visa Approved!</div>
+                                    <div className="text-[11px] text-emerald-600 font-semibold">99.8% Success Rate</div>
+                                  </div>
+                                </div>
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-600 border border-amber-200">
+                                  100% Verified
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Floating Card 2: Compliance Checklist */}
+                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-lg border border-white/80 ring-1 ring-blue-100/60 z-20 transition-transform duration-300 hover:scale-[1.02]">
+                              <div className="flex items-center justify-between mb-1.5">
+                                <span className="text-[11px] font-bold text-[#062B68] uppercase tracking-wider">
+                                  Compliance Checklist
+                                </span>
+                                <span className="text-[10px] text-emerald-600 font-bold">Pass All Checks</span>
+                              </div>
+                              <div className="grid grid-cols-2 gap-1.5 text-[11px] text-slate-700">
+                                <div className="flex items-center gap-1.5">
+                                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                                  <span className="truncate">Financial Solvency</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                                  <span className="truncate">GTE / GS Coaching</span>
+                                </div>
+                              </div>
+                            </div>
+
                           </div>
                         </div>
 
@@ -1285,14 +1389,63 @@ export default function ServicesClient() {
 
                         </div>
 
-                        {/* RIGHT COLUMN: Travel & Flight Support Graphic */}
-                        <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
-                          <div className="relative w-full max-w-[400px] flex items-center justify-center">
-                            <img
-                              src="/images/services-travel-graphic.png"
-                              alt="Travel & Flight Support"
-                              className="w-full h-auto object-contain drop-shadow-sm select-none"
-                            />
+                        {/* RIGHT COLUMN: Real High-Res Airport Travel Photo with Interactive Flight Path Badges */}
+                        <div className="w-full lg:w-[350px] xl:w-[400px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
+                          <div className="relative w-full max-w-[380px] aspect-4/3 sm:aspect-square rounded-[36px] bg-gradient-to-tr from-sky-100/60 via-blue-50/40 to-transparent p-2.5 flex items-center justify-center overflow-hidden border border-blue-100/60 shadow-2xs group">
+                            
+                            {/* Ambient Aviation Glow */}
+                            <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-sky-400/15 blur-2xl pointer-events-none" />
+
+                            {/* Real High-Res Airport Departure Photo */}
+                            <div className="relative w-full h-full rounded-[28px] overflow-hidden">
+                              <img
+                                src="/images/services-travel-student.jpg"
+                                alt="Student Airport Travel & Flight Support"
+                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#062B68]/70 via-[#062B68]/15 to-transparent pointer-events-none" />
+                              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[28px] pointer-events-none" />
+                            </div>
+
+                            {/* Floating Card 1: Flight Route & Student Discount */}
+                            <div className="absolute top-4 left-4 right-4 sm:top-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 shadow-lg border border-white/80 ring-1 ring-blue-100/60 transition-transform duration-300 hover:scale-[1.02] z-20">
+                              <div className="flex items-center justify-between mb-1.5">
+                                <div className="flex items-center gap-1.5">
+                                  <Plane className="w-4 h-4 text-[#0066FF]" />
+                                  <span className="text-xs font-bold text-[#062B68]">Flight Confirmed</span>
+                                </div>
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                  Ticket Issued
+                                </span>
+                              </div>
+                              <div className="flex items-center justify-between pt-1">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs font-mono font-bold text-slate-800">CMB</span>
+                                  <span className="text-slate-400">✈︎</span>
+                                  <span className="text-xs font-mono font-bold text-[#0066FF]">LHR / SYD / YVR</span>
+                                </div>
+                                <span className="text-[11px] font-semibold text-[#F4A51C]">Exclusive Fare</span>
+                              </div>
+                            </div>
+
+                            {/* Floating Card 2: Student Baggage Allowance */}
+                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-lg border border-white/80 ring-1 ring-blue-100/60 z-20 transition-transform duration-300 hover:scale-[1.02]">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2.5">
+                                  <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-[#F4A51C] flex items-center justify-center shrink-0 border border-amber-500/20">
+                                    <Luggage className="w-4 h-4 text-[#F4A51C]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs font-bold text-[#062B68]">40kg – 45kg Luggage</div>
+                                    <div className="text-[11px] text-slate-500">Student Concession + Airport Shuttle</div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50 text-[#0066FF] flex items-center justify-center shrink-0">
+                                  <ChevronRight className="w-3.5 h-3.5" />
+                                </div>
+                              </div>
+                            </div>
+
                           </div>
                         </div>
 
@@ -1302,8 +1455,471 @@ export default function ServicesClient() {
                 }
 
                 // ===================================================================
-                // SERVICES 5-6: STANDARD POLISHED SERVICES CARDS
+                // 5TH SERVICE: ACCOMMODATION GUIDANCE (MATCHING USER MOCKUP)
                 // ===================================================================
+                if (service.id === "accommodation" || service.id === "accommodation-guidance") {
+                  return (
+                    <section
+                      key={service.id}
+                      id={service.id}
+                      className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
+                    >
+                      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
+                        
+                        {/* LEFT COLUMN: Header, 4 Feature Boxes, Key Deliverable & Actions */}
+                        <div className="flex-1 min-w-0 w-full">
+                          
+                          {/* Top Row: Home Icon with Amber Bar + Step & Title + Badge */}
+                          <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                            <div className="flex items-center gap-3.5">
+                              {/* Home Icon with Amber Accent Bar */}
+                              <div className="flex flex-col items-center shrink-0">
+                                <div className="w-12 h-12 rounded-2xl bg-blue-50/90 border border-blue-100/90 text-[#0066FF] flex items-center justify-center shadow-2xs">
+                                  <Home className="w-6 h-6 text-[#0066FF]" />
+                                </div>
+                                <div className="w-10 h-1 bg-[#F4A51C] rounded-full mt-2" />
+                              </div>
+
+                              <div>
+                                <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase">
+                                  <span className="text-[#F4A51C] font-mono">STEP 05</span>
+                                  <span className="text-slate-300">•</span>
+                                  <span className="text-slate-400 font-semibold">{service.category}</span>
+                                </div>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#062B68] tracking-tight mt-0.5">
+                                  {service.title}
+                                </h2>
+                              </div>
+                            </div>
+
+                            {/* 100% Verified Housing Pill Badge */}
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 text-xs sm:text-sm font-semibold text-[#0B4EA2] shrink-0">
+                              <ShieldCheck className="w-4 h-4 text-[#F4A51C]" />
+                              <span>{service.badge}</span>
+                              <ArrowRight className="w-3.5 h-3.5 text-[#0B4EA2]" />
+                            </span>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal max-w-xl">
+                            {service.summary}
+                          </p>
+
+                          {/* WHAT'S INCLUDED: 2x2 Grid with Chevron Right Pills */}
+                          <div className="mb-5">
+                            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                              WHAT’S INCLUDED
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              
+                              {/* 1. Priority Bookings for University Residences (Blue) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-blue-50/90 text-[#0066FF] flex items-center justify-center shrink-0 border border-blue-100/50">
+                                    <Building className="w-5 h-5 text-[#0066FF]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Priority Bookings for University Residences
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Access to university halls and accredited PBSA options.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                              {/* 2. All-Inclusive Utility Support (Amber) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-100">
+                                    <Home className="w-5 h-5 text-amber-500" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      All-Inclusive Utility Support
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Guidance on water, electricity, heating and Wi-Fi contracts.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                              {/* 3. Prime Locations (Amber) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-100">
+                                    <MapPin className="w-5 h-5 text-amber-500" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Prime Locations
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Options within walking distance or direct transit to campus.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                              {/* 4. Transparent Agreements (Blue) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-blue-50/90 text-[#0066FF] flex items-center justify-center shrink-0 border border-blue-100/50">
+                                    <FileText className="w-5 h-5 text-[#0066FF]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Transparent Agreements
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Lease agreements checked for fair and student-friendly terms.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+
+                          {/* Key Deliverable Banner with Golden Sparkles */}
+                          <div className="bg-[#FFF9EE] p-3.5 sm:p-4 rounded-2xl border border-amber-200/80 flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 mb-6">
+                            <Sparkles className="w-5 h-5 text-[#F4A51C] fill-[#F4A51C]/30 shrink-0" />
+                            <div>
+                              <span className="font-bold text-[#062B68]">Key Deliverable: </span>
+                              <span className="text-slate-600">{service.deliverable}</span>
+                            </div>
+                          </div>
+
+                          {/* Bottom Action Row: Book This Service & Have a Question? */}
+                          <div className="flex flex-wrap items-center gap-4 pt-1">
+                            <Link
+                              href="#consultation"
+                              className="inline-flex items-center gap-2 bg-[#062B68] hover:bg-[#0B4EA2] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl transition-all shadow-xs group/btn"
+                            >
+                              <Calendar className="w-4 h-4 text-white" />
+                              <span>Book This Service</span>
+                              <ArrowRight className="w-4 h-4 text-white group-hover/btn:translate-x-0.5 transition-transform" />
+                            </Link>
+
+                            <Link
+                              href="/contact"
+                              className="inline-flex items-center gap-1.5 text-slate-500 hover:text-[#062B68] text-xs sm:text-sm font-semibold transition-colors"
+                            >
+                              <MessageSquare className="w-4 h-4 text-slate-400" />
+                              <span>Have a Question?</span>
+                            </Link>
+                          </div>
+
+                        </div>
+
+                        {/* RIGHT COLUMN: Real High-Res Student Housing Photo with Floating Property Badges */}
+                        <div className="w-full lg:w-[350px] xl:w-[400px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
+                          <div className="relative w-full max-w-[380px] aspect-4/3 sm:aspect-square rounded-[36px] bg-gradient-to-tr from-amber-100/50 via-blue-50/40 to-transparent p-2.5 flex items-center justify-center overflow-hidden border border-blue-100/60 shadow-2xs group">
+                            
+                            {/* Ambient Residence Glow */}
+                            <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-amber-300/15 blur-2xl pointer-events-none" />
+
+                            {/* Real High-Res Residence Hall Photo */}
+                            <div className="relative w-full h-full rounded-[28px] overflow-hidden">
+                              <img
+                                src="/images/services-accommodation-student.jpg"
+                                alt="Student Accommodation & Residence Hall Guidance"
+                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#062B68]/70 via-[#062B68]/15 to-transparent pointer-events-none" />
+                              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[28px] pointer-events-none" />
+                            </div>
+
+                            {/* Floating Card 1: 100% Verified Housing */}
+                            <div className="absolute top-4 left-4 right-4 sm:top-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 shadow-lg border border-white/80 ring-1 ring-blue-100/60 transition-transform duration-300 hover:scale-[1.02] z-20">
+                              <div className="flex items-center justify-between mb-1">
+                                <div className="flex items-center gap-1.5">
+                                  <Building className="w-4 h-4 text-[#0066FF]" />
+                                  <span className="text-xs font-bold text-[#062B68]">University Village PBSA</span>
+                                </div>
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                  Verified
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2 text-[11px] text-slate-600">
+                                <MapPin className="w-3.5 h-3.5 text-[#F4A51C] shrink-0" />
+                                <span>5–10 Mins Walk to Main Campus</span>
+                              </div>
+                            </div>
+
+                            {/* Floating Card 2: En-Suite Studio & Bills Included */}
+                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-lg border border-white/80 ring-1 ring-blue-100/60 z-20 transition-transform duration-300 hover:scale-[1.02]">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2.5">
+                                  <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-[#F4A51C] flex items-center justify-center shrink-0 border border-amber-500/20">
+                                    <KeyRound className="w-4 h-4 text-[#F4A51C]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs font-bold text-[#062B68]">All-Inclusive Contracts</div>
+                                    <div className="text-[11px] text-slate-500">Water, Heat, Wi-Fi & 24/7 Security</div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50 text-[#0066FF] flex items-center justify-center shrink-0">
+                                  <ChevronRight className="w-3.5 h-3.5" />
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
+                  );
+                }
+
+                // ===================================================================
+                // 6TH SERVICE: PRE-DEPARTURE & BRIEFING (MATCHING 2-COLUMN LAYOUT)
+                // ===================================================================
+                if (service.id === "pre-departure" || service.id === "predeparture-briefing") {
+                  return (
+                    <section
+                      key={service.id}
+                      id={service.id}
+                      className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors relative overflow-hidden"
+                    >
+                      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 xl:gap-10">
+                        
+                        {/* LEFT COLUMN: Header, 4 Feature Boxes, Key Deliverable & Actions */}
+                        <div className="flex-1 min-w-0 w-full">
+                          
+                          {/* Top Row: Users Icon with Amber Bar + Step & Title + Badge */}
+                          <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                            <div className="flex items-center gap-3.5">
+                              {/* Users Icon with Amber Accent Bar */}
+                              <div className="flex flex-col items-center shrink-0">
+                                <div className="w-12 h-12 rounded-2xl bg-blue-50/90 border border-blue-100/90 text-[#0066FF] flex items-center justify-center shadow-2xs">
+                                  <Users className="w-6 h-6 text-[#0066FF]" />
+                                </div>
+                                <div className="w-10 h-1 bg-[#F4A51C] rounded-full mt-2" />
+                              </div>
+
+                              <div>
+                                <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase">
+                                  <span className="text-[#F4A51C] font-mono">STEP 06</span>
+                                  <span className="text-slate-300">•</span>
+                                  <span className="text-slate-400 font-semibold">{service.category}</span>
+                                </div>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#062B68] tracking-tight mt-0.5">
+                                  {service.title}
+                                </h2>
+                              </div>
+                            </div>
+
+                            {/* Complete Onboarding Kit Pill Badge */}
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 text-xs sm:text-sm font-semibold text-[#0B4EA2] shrink-0">
+                              <ShieldCheck className="w-4 h-4 text-[#F4A51C]" />
+                              <span>{service.badge}</span>
+                              <ArrowRight className="w-3.5 h-3.5 text-[#0B4EA2]" />
+                            </span>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed mb-6 font-normal max-w-xl">
+                            {service.summary}
+                          </p>
+
+                          {/* WHAT'S INCLUDED: 2x2 Grid with Chevron Right Pills */}
+                          <div className="mb-5">
+                            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                              WHAT’S INCLUDED
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              
+                              {/* 1. Overseas Bank & Forex Card (Blue) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-blue-50/90 text-[#0066FF] flex items-center justify-center shrink-0 border border-blue-100/50">
+                                    <Coins className="w-5 h-5 text-[#0066FF]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Bank Account & Forex Card
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Zero-fee international multi-currency debit card setup.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                              {/* 2. Mandatory Health Insurance (Amber) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-100">
+                                    <ShieldCheck className="w-5 h-5 text-amber-500" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Health Insurance Setup
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Assistance with NHS surcharge, OSHC and private policies.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                              {/* 3. Part-Time Work Rights (Amber) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 border border-amber-100">
+                                    <FileText className="w-5 h-5 text-amber-500" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Legal Work Rights & CV
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Part-time employment rules, NI number and resume guidance.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                              {/* 4. Senior Campus Alumni Connect (Blue) */}
+                              <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#F8FAFD] border border-slate-100 hover:border-blue-100 transition-colors group">
+                                <div className="flex items-center gap-3.5 min-w-0">
+                                  <div className="w-11 h-11 rounded-xl bg-blue-50/90 text-[#0066FF] flex items-center justify-center shrink-0 border border-blue-100/50">
+                                    <Users className="w-5 h-5 text-[#0066FF]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs sm:text-[13px] font-bold text-[#062B68]">
+                                      Senior Peer Network
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 leading-snug mt-0.5">
+                                      Direct intro to AST alumni currently studying on your campus.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50/60 flex items-center justify-center shrink-0 ml-2">
+                                  <ChevronRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+
+                          {/* Key Deliverable Banner with Golden Sparkles */}
+                          <div className="bg-[#FFF9EE] p-3.5 sm:p-4 rounded-2xl border border-amber-200/80 flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 mb-6">
+                            <Sparkles className="w-5 h-5 text-[#F4A51C] fill-[#F4A51C]/30 shrink-0" />
+                            <div>
+                              <span className="font-bold text-[#062B68]">Key Deliverable: </span>
+                              <span className="text-slate-600">{service.deliverable}</span>
+                            </div>
+                          </div>
+
+                          {/* Bottom Action Row: Book This Service & Have a Question? */}
+                          <div className="flex flex-wrap items-center gap-4 pt-1">
+                            <Link
+                              href="#consultation"
+                              className="inline-flex items-center gap-2 bg-[#062B68] hover:bg-[#0B4EA2] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-xl transition-all shadow-xs group/btn"
+                            >
+                              <Calendar className="w-4 h-4 text-white" />
+                              <span>Book This Service</span>
+                              <ArrowRight className="w-4 h-4 text-white group-hover/btn:translate-x-0.5 transition-transform" />
+                            </Link>
+
+                            <Link
+                              href="/contact"
+                              className="inline-flex items-center gap-1.5 text-slate-500 hover:text-[#062B68] text-xs sm:text-sm font-semibold transition-colors"
+                            >
+                              <MessageSquare className="w-4 h-4 text-slate-400" />
+                              <span>Have a Question?</span>
+                            </Link>
+                          </div>
+
+                        </div>
+
+                        {/* RIGHT COLUMN: Real High-Res Orientation Photo with Floating Settlement Badges */}
+                        <div className="w-full lg:w-[350px] xl:w-[400px] shrink-0 self-center lg:self-stretch flex items-center justify-center relative pt-4 lg:pt-0">
+                          <div className="relative w-full max-w-[380px] aspect-4/3 sm:aspect-square rounded-[36px] bg-gradient-to-tr from-sky-100/50 via-blue-50/40 to-transparent p-2.5 flex items-center justify-center overflow-hidden border border-blue-100/60 shadow-2xs group">
+                            
+                            {/* Ambient Orientation Glow */}
+                            <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-sky-300/15 blur-2xl pointer-events-none" />
+
+                            {/* Real High-Res Students Briefing Photo */}
+                            <div className="relative w-full h-full rounded-[28px] overflow-hidden">
+                              <img
+                                src="/images/services-predeparture-students.jpg"
+                                alt="Pre-Departure Briefing & International Student Orientation"
+                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#062B68]/70 via-[#062B68]/15 to-transparent pointer-events-none" />
+                              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[28px] pointer-events-none" />
+                            </div>
+
+                            {/* Floating Card 1: Briefing & Orientation Complete */}
+                            <div className="absolute top-4 left-4 right-4 sm:top-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 shadow-lg border border-white/80 ring-1 ring-blue-100/60 transition-transform duration-300 hover:scale-[1.02] z-20">
+                              <div className="flex items-center justify-between mb-1">
+                                <div className="flex items-center gap-1.5">
+                                  <ShieldCheck className="w-4 h-4 text-[#0066FF]" />
+                                  <span className="text-xs font-bold text-[#062B68]">Pre-Departure Briefing</span>
+                                </div>
+                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                  Session Ready
+                                </span>
+                              </div>
+                              <div className="text-[11px] text-slate-600">
+                                Students & Parents Orientation Included
+                              </div>
+                            </div>
+
+                            {/* Floating Card 2: Settlement Kit */}
+                            <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-lg border border-white/80 ring-1 ring-blue-100/60 z-20 transition-transform duration-300 hover:scale-[1.02]">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2.5">
+                                  <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-[#F4A51C] flex items-center justify-center shrink-0 border border-amber-500/20">
+                                    <Star className="w-4 h-4 fill-[#F4A51C]" />
+                                  </div>
+                                  <div>
+                                    <div className="text-xs font-bold text-[#062B68]">Settlement Kit & Forex</div>
+                                    <div className="text-[11px] text-slate-500">Intl SIM • Bank Account • Senior Buddy</div>
+                                  </div>
+                                </div>
+                                <div className="w-6 h-6 rounded-full bg-blue-50 text-[#0066FF] flex items-center justify-center shrink-0">
+                                  <ChevronRight className="w-3.5 h-3.5" />
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
+                  );
+                }
+
+                // Fallback for any other services
                 const Icon = service.icon;
                 return (
                   <section
@@ -1311,94 +1927,10 @@ export default function ServicesClient() {
                     id={service.id}
                     className="scroll-mt-32 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm hover:border-slate-300 transition-colors"
                   >
-                    {/* Header Row: Icon, Step Tag, Title & Badge */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-5 border-b border-slate-100">
-                      
-                      <div className="flex items-center gap-3.5">
-                        <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100/60 text-[#0B4EA2] flex items-center justify-center shrink-0 shadow-2xs">
-                          <Icon className="w-6 h-6 text-[#0B4EA2]" />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-xs font-mono font-bold text-[#F4A51C]">
-                              STEP {service.number}
-                            </span>
-                            <span className="text-slate-300">•</span>
-                            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                              {service.category}
-                            </span>
-                          </div>
-                          <h2 className="text-2xl sm:text-3xl font-bold text-[#062B68] font-serif mt-0.5">
-                            {service.title}
-                          </h2>
-                        </div>
-                      </div>
-
-                      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 text-xs font-semibold text-[#0B4EA2]">
-                        <ShieldCheck className="w-3.5 h-3.5 text-[#F4A51C]" />
-                        <span>{service.badge}</span>
-                      </span>
-
+                    <div className="flex items-center gap-3">
+                      <Icon className="w-6 h-6 text-[#0B4EA2]" />
+                      <h2 className="text-2xl font-bold text-[#062B68]">{service.title}</h2>
                     </div>
-
-                    {/* Summary Description */}
-                    <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-                      {service.summary}
-                    </p>
-
-                    {/* WHAT'S INCLUDED: 4 Box Grid */}
-                    <div className="mb-6">
-                      <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-                        WHAT’S INCLUDED:
-                      </h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {service.features.map((feature, fIdx) => {
-                          const FeatureIcon = feature.icon;
-                          return (
-                            <div
-                              key={fIdx}
-                              className="flex items-center gap-3 bg-[#FAFBFD] p-3.5 rounded-xl border border-slate-100 hover:border-slate-200 transition-colors"
-                            >
-                              <div className="w-9 h-9 rounded-xl bg-blue-50 text-[#0B4EA2] flex items-center justify-center shrink-0 border border-blue-100/60">
-                                <FeatureIcon className="w-4 h-4 text-[#0B4EA2]" />
-                              </div>
-                              <span className="text-xs sm:text-[13px] text-slate-700 font-medium leading-snug">
-                                {feature.text}
-                              </span>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Key Deliverable Banner with Gold Sparkles */}
-                    <div className="bg-[#F0F6FD] p-3.5 rounded-xl border border-blue-100/70 flex items-center gap-2.5 text-xs sm:text-sm text-slate-700 mb-6">
-                      <Sparkles className="w-4 h-4 text-[#F4A51C] shrink-0" />
-                      <div>
-                        <span className="font-bold text-[#062B68]">Key Deliverable: </span>
-                        <span>{service.deliverable}</span>
-                      </div>
-                    </div>
-
-                    {/* Bottom Action Row: Book This Service & Have a Question? */}
-                    <div className="flex flex-wrap items-center gap-4 pt-2">
-                      <Link
-                        href="#consultation"
-                        className="inline-flex items-center gap-2 bg-[#062B68] hover:bg-[#0B4EA2] text-white text-xs sm:text-sm font-semibold px-6 py-2.5 rounded-xl transition-colors shadow-xs group/btn"
-                      >
-                        <span>Book This Service</span>
-                        <ArrowRight className="w-3.5 h-3.5 text-white group-hover/btn:translate-x-0.5 transition-transform" />
-                      </Link>
-
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1.5 text-slate-500 hover:text-[#062B68] text-xs sm:text-sm font-medium transition-colors"
-                      >
-                        <MessageSquare className="w-3.5 h-3.5 text-slate-400" />
-                        <span>Have a Question?</span>
-                      </Link>
-                    </div>
-
                   </section>
                 );
               })}
